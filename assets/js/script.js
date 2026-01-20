@@ -1,18 +1,29 @@
-var buyNow = document.getElementById('buyNow');
-var youtube = document.getElementById('youtube');
-var x = document.getElementById('x');
+var start = document.getElementById('start');
+var content = document.getElementById('content');
+var ambience = new Audio('assets/audio/website ambien.mp3');
+var click = new Audio('assets/audio/clicke.wav');
 
-buyNow.addEventListener('click', function() {
-    location.href = "https://www.youtube.com/watch?v=g-lBQAoc6W0"
+const imagePaths = [
+    "assets/images/random/image.png",
+    "assets/images/random/image2.png",
+    "assets/images/random/image3.png",
+    "assets/images/random/image4.png"
+];
+
+var isStarted = false;
+
+start.addEventListener('click', function() {
+    ambience.play();
+
+    content.style.display = 'block';
+    start.style.display = 'none';
+
+    isStarted = true;
 });
 
-youtube.addEventListener('click', function() {
-    window.open("https://www.youtube.com/@birchboy16", "_blank").focus();
-});
-
-x.addEventListener('click', function() {
-    window.open("https://x.com/BirchBoy16", "_blank").focus();
-});
+content.addEventListener('click', (event) => {
+    click.play();
+})
 
 setInterval(changeTitle, 1000);
 
@@ -25,4 +36,29 @@ function changeTitle() {
     if (titleNum >= titles.length) {
         titleNum = 0;
     }
+}
+
+Notification.requestPermission();
+
+alert("PLEASE DON'T LEAVE");
+
+if (Math.random() < 1 / 69)
+{
+    setInterval(images, 100);
+}
+
+function images()
+{
+    if (!isStarted)
+        return;
+
+    var img = document.createElement("img");
+    img.src = imagePaths[Math.floor(Math.random() * imagePaths.length)];
+    var src = document.getElementById("randomImages");
+    
+    img.style.position = "fixed";
+    img.style.left = Math.random() * window.innerWidth + "px";
+    img.style.top = Math.random() * window.innerHeight  + "px";
+
+    src.appendChild(img);
 }

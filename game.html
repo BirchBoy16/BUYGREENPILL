@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIRCHBOY ACTION ADVENTURE GAME VERSION 0.0.0.0.0.0.1</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/game.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script> 
+    <script> 
+        $(function(){
+            $("#header").load("header.html"); 
+            $("#footer").load("footer.html"); 
+        });
+    </script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="spacer" id="content">
+        <h1>BIRCHBOY ACTION ADVENTURE GAME VERSION</h1>
+
+        <div id="gameArea">
+            <h2 id="loadingText">Loading...</h2>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="assets/js/game.js"></script>
+</body>
+</html>

@@ -6,34 +6,50 @@
     <title>BUY GREENPILL RIGHT NOW</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script> 
+    <script> 
+        $(function(){
+            $("#header").load("header.html"); 
+            $("#footer").load("footer.html"); 
+        });
+    </script>
 </head>
 <body>
-    <h1 class="title" id="mainTitle">BUY GREENPILL RIGHT NOW</h1>
-    <p>This is a simple HTML document structure.</p>
-
-    <div class="purchase">
-        <img src="assets/images/snowboard.png" alt="Snowboard Image" class="purchaseChild"/>
-        <div class="purchaseChild price-tag">
-            <h2>Get your Greenpill Snowboard today!</h2>
-            <p>$299.99</p>
-            <button id="buyNow">Buy Now</button>
-        </div>
-    </div>
-
-    <div class="socials">
-        <h2>FOLLOW ME OR SUFFER CONSEQUENC</h2>
-        <img src="assets/images/youtube.png" alt="YouTube" id="youtube"/>
-        <img src="assets/images/x.png" alt="X" id="x"/>
-    </div>
-
-    <img src="assets/images/racism.png" alt="racism" class="racism"/>
+    <div id="header"></div>
     
-    <p style="margin-top: 100em; text-align: center;">go away</p>
+    <div class="spacer" id="content">
+        <h1 class="title" id="mainTitle">BUY GREENPILL RIGHT NOW</h1>
+        <p>This is a simple HTML document structure.</p>
 
-    <footer>
-        <p>&copy; 2024 Greenpill Inc. All wrongs reserved. DON'T FUCK WITH THIS WEBSITE IT WAS MADE 100% BY ME AND NO ONE ELSE I WILL SUE THE SHIT OUT OF YOU</p>
-    </footer>
+        <div class="purchase">
+            <img src="assets/images/snowboard.png" alt="Snowboard Image" class="purchaseChild"/>
+            <div class="purchaseChild price-tag">
+                <h2>Get your Greenpill Snowboard today!</h2>
+                <p>$299.99</p>
+                <button>Buy Now</button>
+            </div>
+        </div>
 
-    <script src="assets/js/script.js"></script>
+        <div class="socials">
+            <h2>FOLLOW ME OR SUFFER CONSEQUENC</h2>
+            <img src="assets/images/youtube.png" alt="YouTube" id="youtube"/>
+            <img src="assets/images/x.png" alt="X" id="x"/>
+        </div>
+
+        <div class="videos">
+            <iframe width="480" height="270" src="https://www.youtube.com/embed/S9P8mQNJ2n0" frameBorder="0"></iframe>
+            <iframe width="480" height="270" src="https://www.youtube.com/embed/hiCyO6kdNUU" frameBorder="0"></iframe>
+            <iframe width="480" height="270" src="https://www.youtube.com/embed/U7wmYWHOmJ4" frameBorder="0"></iframe>
+            <iframe width="480" height="270" src="https://www.youtube.com/embed/lsMFwdqbH9Y" frameBorder="0"></iframe>
+            <iframe width="1280" height="720" src="https://www.youtube.com/embed/80yHJIVEJmM" frameBorder="0"></iframe>
+        </div>
+        
+        <a href="assets/fbf_moment.mov"><img class="randomButton" src="assets/images/download.png"></a>
+        
+        <p style="margin-top: 100em; text-align: center;">go away</p>
+    </div>
+
+    <div id="footer"></div>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
